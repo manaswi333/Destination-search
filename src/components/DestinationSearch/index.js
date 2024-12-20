@@ -15,8 +15,8 @@ class DestinationSearch extends Component {
     const {searchInput} = this.state
     const value = searchInput.toLowerCase()
     const filteredPlacesList = destinationsList.filter(eachPlace =>
-      eachPlace.name.includes(value),
-    )
+      eachPlace.name.toLowerCase().includes(value)
+    );
     return (
       <div className="bg-container">
         <h1>Destination Search</h1>
